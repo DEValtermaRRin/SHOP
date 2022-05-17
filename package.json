@@ -1,0 +1,22 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "e-shop",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DEValtermaRRin/shop.git"
+  },
+  "author": "BogdanovaMV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DEValtermaRRin/shop/issues"
+  },
+  "homepage": "https://github.com/DEValtermaRRin/shop#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
