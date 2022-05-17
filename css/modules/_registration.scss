@@ -1,0 +1,156 @@
+@import "./vars";
+
+.registration {
+	&__flex {
+		display: flex;
+		
+	}
+
+	&__forms {
+		max-width: 360px;
+		margin-top: 30px;
+		margin-bottom: 96px;
+	}
+
+	&__spec {
+		margin-top: 64px;
+		margin-left: 128px;
+	}
+}
+
+.reg-form {
+	
+	&__flex {
+		margin-top: 33px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: capitalize;
+		color: #222;
+		margin-bottom: 20px;
+	}
+
+	&__field {
+		margin-bottom: 20px;
+		width: 360px;
+		border: 1px solid #a4a4a4;
+		padding: 16px 0px 17px 17px;
+	}
+	&__field::placeholder {
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 16px;
+		text-transform: capitalize;
+		color: #b1b1b1;		
+	}
+
+	&__text {
+		margin-top: -5px;
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 16px;
+		text-transform: none;
+		color: #b1b1b1;
+	}
+	&__btn{
+		margin-top: 40px;
+	
+		max-width: 167px;
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+		text-transform: uppercase;
+		color: #fff;
+		background: $mainDecorColor;
+		padding: 19px 29px;
+		& p::after{
+			content: '';
+			display: inline-block;
+			width: 17px;
+			height: 10px;
+			background: url('../../svgicons/light-arrow.svg') center center no-repeat;
+			margin-left: 20px;
+		}
+	}
+}
+.reg-form--left {
+}
+.radio--flex {
+	max-width: 130px;
+	display: flex;	
+	align-items: center;
+	justify-content: space-between;
+	& p {
+		
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 11px;
+		line-height: 13px;
+		text-transform: capitalize;
+		color: #000;
+	}
+}
+.radio--btn {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	border: 1px solid #a4a4a4;
+	border-radius: 50%;
+	margin-right: 10px;
+	vertical-align: text-top;
+}
+
+.spec-reg {
+	
+
+	&__title {
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		text-transform: uppercase;
+		color: #000;
+	}
+
+	&__text {
+		margin-top: 22px;
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		text-transform: none;
+		color: #000;
+	}
+
+	&__list {
+		margin-top: 21px;
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		text-transform: none;
+		color: #000;
+	}
+
+	&__check {
+		
+		&::before{
+			content: '';
+			display: inline-block;
+			width: 20px;
+			height: 16px;
+			background: url('../../svgicons/checked.svg') top left no-repeat;
+			margin-right: 22px;			
+		}
+	}
+}

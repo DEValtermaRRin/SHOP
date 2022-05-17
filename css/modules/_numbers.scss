@@ -1,0 +1,49 @@
+.numbers {
+
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__list {		
+		width: 290px;
+		height: 44px;
+		border: 1px  solid #EBEBEB;
+		margin: 48px auto;
+		padding: 13px 16px;
+		border-radius: 5px;
+		margin-bottom: 96px;
+		}
+
+	&__item {
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: uppercase;
+		color: #C4C4C4;
+		&:hover{
+			cursor: pointer;
+			color: $mainDecorColor;
+		}
+		&:first-child::before{
+			content: '';
+			display: inline-block;
+			width: 8px;
+			height: 14px;
+			background: url('../svgicons/arrow-left.svg') bottom center no-repeat;
+			background-size: contain;
+			margin-right: 18px;
+		}
+		&:last-child::after{
+			content: '';
+			display: inline-block;
+			width: 8px;
+			height: 14px;
+			background: url('../svgicons/arrow-right.svg') bottom center no-repeat;
+			background-size: contain;
+			margin-left: 18px;
+		}
+	}
+}
+
