@@ -1,0 +1,48 @@
+@import './vars';
+.sub-header {
+	background-color: #F8F3F4;
+
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		padding: 60px 0px 60px 0px;
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 28.8px;
+		text-transform: uppercase;
+		color: $mainDecorColor;
+	}
+}
+
+.navigation {
+	&__link {
+		font-family: $fontFamily;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 17px;
+		text-transform: uppercase;
+		color: $mainDecorColor;
+		&:not(:last-child){
+			font-family: $fontFamily;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 17px;
+			text-transform: uppercase;
+			color: #636363;
+		}
+		&:not(:last-child)::after{
+			content: ' /';
+			font-family: $fontFamily;
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 17px;
+			text-transform: uppercase;
+			color: #636363;
+		}		
+	}
+}

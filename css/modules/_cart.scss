@@ -1,0 +1,244 @@
+@import "./vars";
+
+.cart {
+	&__flex {
+		display: flex;
+	}
+
+	&__right {
+		margin-left: 128px;
+	}
+}
+
+.cart-items {
+	&__flex {
+		display: flex;
+		flex-direction: column;
+	}
+}
+.cart-item {
+	max-width: 652px;
+	box-shadow: 17px 19px 24px 0px #00000021;
+	position: relative;
+
+	&::after,
+	&::before {
+		content: "";
+		display: block;
+		width: 20px;
+		height: 2px;
+		background-color: #575757;
+		position: absolute;
+		right: 22px;
+		border-radius: 5px;
+	}
+	&::after {
+		top: 35px;
+		transform: rotate(-45deg);
+		&:hover {
+			cursor: pointer;
+			background-color: $mainDecorColor;
+			transition: 1s;
+		}
+	}
+	&::before {
+		top: 35px;
+		transform: rotate(45deg);
+	}
+
+	&__flex {
+		display: flex;
+	}
+
+	&__img {
+		max-height: 306px;
+	}
+
+	&__description {
+		padding: 22px 97px 62px 31px;
+	}
+
+	&__title {
+		margin-bottom: 42px;
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 29px;
+		text-transform: uppercase;
+		color: #222;
+	}
+
+	&__char {
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 22px;
+		line-height: 26px;
+		text-transform: capitalize;
+		color: #575757;
+	}
+
+	&__char--price {
+		color: $mainDecorColor;
+	}
+
+	&__char--dsc {
+		color: #6f6e6e;
+	}
+
+	&:first-child {
+		margin: 96px 0px 40px;
+	}
+}
+.button-flex {
+	margin-top: 72px;
+	margin-bottom: 128px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.cart-btn {
+	max-width: 235px;
+	font-family: $fontFamily;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #000;
+	padding: 16px 40px;
+	background-color: #fff;
+	border: 1px solid #a4a4a4;
+	&:hover {
+		background-color: $mainDecorColor;
+		color: #fff;
+		transition: background-color 1s ease-in-out, color 0.2s ease-out;
+	}
+}
+.cart-form {
+	&__flex {
+		display: flex;
+		flex-direction: column;
+		margin-top: 113px;
+	}
+
+	&__title {
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: uppercase;
+		color: #222;
+		margin-bottom: 20px;
+	}
+
+	&__field {
+		width: 360px;
+		padding: 13px 0px 17px 16px;
+		border: 1px solid #a4a4a4;
+		margin-bottom: 20px;
+		&:last-child {
+			margin-bottom: 23px;
+		}
+	}
+	&__field::placeholder {
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 16px;
+		text-transform: capitalize;
+		color: #222;
+	}
+	&__field:focus::placeholder {
+		color: #b1b1b1;
+	}
+
+	&__btn {
+		max-width: 102px;
+		border: 1px solid #a4a4a4;
+		background-color: #fff;
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 11px;
+		line-height: 13px;
+		text-transform: uppercase;
+		color: #000;
+		padding: 11px 14px;
+		&:hover {
+			background-color: $mainDecorColor;
+			color: #fff;
+			transition: background-color 1s ease-in-out, color 0.2s ease-out;
+		}
+	}
+}
+.checkout {
+	max-width: 360px;
+	max-height: 214px;
+	background: #f5f3f3;
+	text-align: center;
+
+	&__flex {
+		margin-top: 57px;
+		padding: 39px 34px 42px 44px;
+	}
+
+	&__sub {
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 11px;
+		line-height: 13px;
+		text-transform: uppercase;
+		color: #4a4a4a;
+		text-align: right;
+	}
+
+	&__grand {
+		font-family: $fontFamily;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: uppercase;
+		color: #222;
+		margin: 12px 0px 0px 0px;
+		text-align: right;
+	}
+
+	&__grand--price {
+		font-family: $fontFamily;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: uppercase;
+		color: $mainDecorColor;
+	}
+}
+
+.line3 {
+	width: 275px;
+	height: 1px;
+	background-color: #e2e2e2;
+	margin: 21px 0px 17px 0px;
+}
+.cart-btn--main {
+	font-family: $fontFamily;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: $mainDecorColor;
+	padding: 15px 42px;
+}
+
+.quantity{
+	
+	display: inline-block;
+	width: 44px;
+	height: 25px;
+	border: 1px solid #EAEAEA;
+	font-family: $fontFamily;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: uppercase;
+	color: #656565;
+	text-align: center;
+}
