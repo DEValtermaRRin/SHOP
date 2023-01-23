@@ -810,7 +810,7 @@ details summary::webkit-details-marker {
   display: flex;
 }
 .form-sub__area {
-  background-color: #E1E1E1;
+  background-color: #e1e1e1;
   padding: 7px 64px 6px 22px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -842,7 +842,7 @@ details summary::webkit-details-marker {
   vertical-align: middle;
   padding: 24px 0px 24px 0px;
   background-color: #222224;
-  color: #FBFBFB;
+  color: #fbfbfb;
 }
 .bottom__flex {
   display: flex;
@@ -854,7 +854,7 @@ details summary::webkit-details-marker {
   font-size: 16px;
   line-height: 19.2px;
   text-transform: capitalize;
-  color: #FBFBFB;
+  color: #fbfbfb;
 }
 
 .socials {
@@ -864,7 +864,7 @@ details summary::webkit-details-marker {
   gap: 8px;
 }
 .socials__icon {
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   fill: #222224;
   padding: 8px 10px;
 }
