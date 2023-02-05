@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Registration</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Registration</title>
 </head>
+
 <body>
-	<div class="wrapper">
+  <div class="wrapper">
     <header class="header">
       <div class="header__flex container">
         <div class="left">
@@ -17,9 +19,9 @@
           </div>
           <div class="left__search">
             <!-- TODO сделать поле ввода для поиска при нажатии на лупу -->
-              <button>
-                <img src="./svgicons/search.svg" alt="search">
-              </button>
+            <button>
+              <img src="./svgicons/search.svg" alt="search">
+            </button>
 
           </div>
         </div>
@@ -68,60 +70,64 @@
       </div>
 
     </header>
-		<main>
-			<header class="sub-header">
-				<div class="sub-header__flex container">
-					<h1 class="sub-header__title">Registration</h1>
-					<nav class="navigation">
-						<a href="index.html" class="navigation__link">home</a>
-						<a href="#" class="navigation__link">Registration</a>
-					</nav>
-				</div>
-			</header>
-			<div class="registration">
-				<div class=" registration__flex container">
-					<div class="registration__forms reg-form">
-						<div class="reg-form--left">
-							<form action="#">
-								<fieldset class="reg-form__flex">
-									<legend class="reg-form__title">your name</legend>
-									<input type="text" name="" id="" class="reg-form__field" placeholder="first name">
-									<input type="text" name="" id="" class="reg-form__field" placeholder="last name">
-									<div class="radio--flex">
-										<p><input class="radio--btn" type="radio" name="gender" id=""> male</p>
-										<p><input class="radio--btn" type="radio" name="gender" id=""> femail</p>
-									</div>
-								</fieldset>
-							</form>
-						</div>
-						<div class="reg-form--right">
-							<form action="#">
-								<fieldset class="reg-form__flex">
-									<legend class="reg-form__title">Login details</legend>
-									<input type="email" name="" id="" class="reg-form__field" placeholder="email">
-									<input type="password" name="" id="" class="reg-form__field" placeholder="password">
-									<p class="reg-form__text">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
-									<button class="reg-form__btn" type="submit"><p>join now</p></button>
-								</fieldset>
-							</form>
-						</div>
-					</div>
-					<div class="registration__spec spec-reg">
-						<div class="spec-reg__flex">
-							<h2 class="spec-reg__title">LOYALTY HAS ITS PERKS</h2>
-							<p class="spec-reg__text">Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>
-							<ul class="spec-reg__list">
-								<li class="spec-reg__check">15% off welcome offer</li>
-								<li class="spec-reg__check">Free shipping, returns and exchanges on all orders</li>
-								<li class="spec-reg__check">$10 off a purchase on your birthday</li>
-								<li class="spec-reg__check">Early access to products</li>
-								<li class="spec-reg__check">Exclusive offers & rewards</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
+    <main>
+      <header class="sub-header">
+        <div class="sub-header__flex container">
+          <h1 class="sub-header__title">Registration</h1>
+          <nav class="navigation">
+            <a href="index.html" class="navigation__link">home</a>
+            <a href="#" class="navigation__link">Registration</a>
+          </nav>
+        </div>
+      </header>
+      <div class="registration">
+        <div class=" registration__flex container">
+          <div class="registration__forms reg-form">
+            <div class="reg-form--left">
+              <form action="#">
+                <fieldset class="reg-form__flex">
+                  <legend class="reg-form__title">your name</legend>
+                  <input type="text" name="" id="" class="reg-form__field" placeholder="first name">
+                  <input type="text" name="" id="" class="reg-form__field" placeholder="last name">
+                  <div class="radio--flex">
+                    <p><input class="radio--btn" type="radio" name="gender" id=""> male</p>
+                    <p><input class="radio--btn" type="radio" name="gender" id=""> femail</p>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <div class="reg-form--right">
+              <form action="#">
+                <fieldset class="reg-form__flex">
+                  <legend class="reg-form__title">Login details</legend>
+                  <input type="email" name="" id="" class="reg-form__field" placeholder="email">
+                  <input type="password" name="" id="" class="reg-form__field" placeholder="password">
+                  <p class="reg-form__text">Please use 8 or more characters, with at least 1 number and a mixture of
+                    uppercase and lowercase letters</p>
+                  <button class="reg-form__btn" type="submit">
+                    <p>join now</p>
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+          <div class="registration__spec spec-reg">
+            <div class="spec-reg__flex">
+              <h2 class="spec-reg__title">LOYALTY HAS ITS PERKS</h2>
+              <p class="spec-reg__text">Get in on the loyalty program where you can earn points and unlock serious
+                perks. Starting with these as soon as you join:</p>
+              <ul class="spec-reg__list">
+                <li class="spec-reg__check">15% off welcome offer</li>
+                <li class="spec-reg__check">Free shipping, returns and exchanges on all orders</li>
+                <li class="spec-reg__check">$10 off a purchase on your birthday</li>
+                <li class="spec-reg__check">Early access to products</li>
+                <li class="spec-reg__check">Exclusive offers & rewards</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer>
       <div class="top">
         <div class="top__flex container">
@@ -163,6 +169,7 @@
         </div>
       </div>
     </footer>
-	</div>
+  </div>
 </body>
+
 </html>
