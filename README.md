@@ -20,6 +20,7 @@
 
 ---
 
-## Ссылка на сайт: ##
-[Перейти на сайт](https://devaltermarrin.github.io/shop/)
-[Ссылка на макет](https://www.figma.com/file/iD2289DrTInTetIYVUs0jB/shop-(Copy)?node-id=0%3A1&t=nbyNuL2SPr7ZI3rC-0)
+## Полезные ссылки: ##
+ * [Перейти на сайт](https://devaltermarrin.github.io/shop/)
+
+ * [Ссылка на макет](https://www.figma.com/file/iD2289DrTInTetIYVUs0jB/shop-(Copy)?node-id=0%3A1&t=nbyNuL2SPr7ZI3rC-0)
