@@ -2,8 +2,24 @@
 
 	&__grid {
 		display: grid;
-		grid-template: repeat(3, 580px) / repeat(3, 1fr);
+		grid-template: repeat(3, minmax(300px, 580px)) / repeat(3, 1fr);
 		gap: 30px;
 		padding: 0px 0px 0px 0px;
 	}
+}
+
+@media screen and (max-width: 768px) {
+  .products{
+    &__grid{
+      grid-template: repeat(4, minmax(300px, 1fr)) / repeat(2, 1fr);
+    }
+  }
+}
+@media screen and (max-width: 490px) {
+  .products{
+    &__grid{
+      grid-template: repeat(4, minmax(300px, 1fr)) / 1fr;
+      justify-items: center;
+    }
+  }
 }

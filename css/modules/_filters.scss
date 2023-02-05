@@ -1,218 +1,220 @@
 @import "./vars";
 
 .filters {
-	&__grid {
-		display: grid;
-		grid-template: 60px / repeat(3, 1fr);
-		vertical-align: middle;
-		text-align: left;
-	}
+  &__grid {
+    display: grid;
+    grid-template: 60px / 35% 1fr;
+    vertical-align: middle;
+    text-align: left;
+  }
 
-	&__filter {
-		position: relative;
-	}
+  &__filter {
+    position: relative;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 .filter {
-	&__heading {
-		display: block;
-		background-color: #fff;
-	}
+  &__heading {
+    display: block;
+    background-color: #fff;
+  }
 
-	&__heading[open] {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 10;
-		background-color: #fff;
-		box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-		width: 360px;
+  &__heading[open] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    width: 360px;
 
-		& .filter__title {
-			color: $mainDecorColor;
-		}
+    & .filter__title {
+      color: $mainDecorColor;
+    }
 
-		& .filter__title::before,
-		& .filter__title::after,
-		& .filter__title span {
-			background-color: $mainDecorColor;
-		}
-	}
+    & .filter__title::before,
+    & .filter__title::after,
+    & .filter__title span {
+      background-color: $mainDecorColor;
+    }
+  }
 
-	&__title {
-		padding: 22px 0px 16px 16px;
-		font-family: $fontFamily;
-		font-weight: 600;
-		font-size: 14px;
-		line-height: 17px;
-		text-transform: uppercase;
-		color: #000;
-		position: relative;
+  &__title {
+    padding: 22px 0px 16px 16px;
+    font-family: $fontFamily;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
 
-		&::before {
-			content: "";
-			position: absolute;
-			top: 26px;
-			left: 65px;
-			background-color: #000;
-			width: 1rem;
-			height: 2px;
-			border-radius: 30px;
-		}
+    &::before {
+      content: "";
+      position: absolute;
+      top: 26px;
+      left: 65px;
+      background-color: #000;
+      width: 1rem;
+      height: 2px;
+      border-radius: 30px;
+      display: block;
+    }
 
-		&::after {
-			content: "";
-			position: absolute;
-			top: 34px;
-			left: 65px;
-			background-color: #000;
-			width: 0.3rem;
-			height: 2px;
-			border-radius: 30px;
-		}
+    &::after {
+      content: "";
+      position: absolute;
+      top: 34px;
+      left: 65px;
+      background-color: #000;
+      width: 0.3rem;
+      height: 2px;
+      border-radius: 30px;
+    }
 
-		& span {
-			position: absolute;
-			top: 30px;
-			left: 65px;
-			background-color: #000;
-			width: 0.6rem;
-			height: 2px;
-			border-radius: 30px;
-		}
+    & span {
+      position: absolute;
+      top: 30px;
+      left: 65px;
+      background-color: #000;
+      width: 0.6rem;
+      height: 2px;
+      border-radius: 30px;
+    }
 
-		&:hover {
-			cursor: pointer;
-		}
-	}
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
-	&__category {
-		padding: 17px 18px 16px 17px;
-	}
+  &__category {
+    padding: 17px 18px 16px 17px;
+  }
 
-	&__subtitle {
-		font-family: $fontFamily;
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 17px;
-		text-transform: uppercase;
-		color: $mainDecorColor;
-		padding: 8px 0px 11px 11px;
-		border-left: 5px solid $mainDecorColor;
-		border-bottom: 1px solid #ebebeb;
+  &__subtitle {
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: $mainDecorColor;
+    padding: 8px 0px 11px 11px;
+    border-left: 5px solid $mainDecorColor;
+    border-bottom: 1px solid #ebebeb;
 
-		&:hover {
-			cursor: pointer;
-		}
-	}
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
-	&__list a {
-		font-family: $fontFamily;
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 17px;
-		text-transform: capitalize;
-		color: #6f6e6e;
-	}
+  &__list a {
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: capitalize;
+    color: #6f6e6e;
+  }
 
-	&__list li {
-		padding: 11px 0px 11px 34px;
+  &__list li {
+    padding: 11px 0px 11px 34px;
 
-		&:first-child {
-			margin-top: 24px;
-		}
+    &:first-child {
+      margin-top: 24px;
+    }
 
-		&:last-child {
-			margin-bottom: 24px;
-		}
-	}
+    &:last-child {
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .sort {
-	&__flex {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-	}
+  text-align: right;
+  &__item {
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: calc(12px + 2 * ((100vw - 320px) / (1140 - 320)));
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #6f6e6e;
+    position: relative;
+    margin-right: 48px;
 
-	&__item {
-		font-family: $fontFamily;
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 17px;
-		text-transform: uppercase;
-		color: #6f6e6e;
-		position: relative;
-		margin-right: 48px;
+    &:first-child {
+      padding-left: 10px;
+    }
 
-		&:first-child {
-			padding-left: 10px;
-		}
+    &::after {
+      content: "";
+      background: url("../svgicons/arrow-down.svg") no-repeat;
+      position: absolute;
+      top: 0.5em;
+      right: -1.5em;
+      width: 10px;
+      height: 5px;
+    }
 
-		&::after {
-			content: "";
-			background: url("../svgicons/arrow-down.svg") no-repeat;
-			position: absolute;
-			top: 0.5em;
-			right: -1.5em;
-			width: 10px;
-			height: 5px;
-		}
-
-		&:hover {
-			cursor: pointer;
-		}
-	}
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .size {
-	position: relative;
+  position: relative;
 
-	&__flex {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-	}
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 
-	&__form {
-		position: absolute;
-		top: 25px;
-		left: -15px;
-		z-index: 10;
-		width: 5rem;
-		height: 7rem;
-		background-color: #fff;
-		box-shadow: 6px 4px 35px 0px #00000036;
-		padding: 6px 0px 0px 6px;
-		opacity: 0;
-	}
+  &__form {
+    position: absolute;
+    top: 25px;
+    left: -15px;
+    z-index: 10;
+    width: 5rem;
+    height: 7rem;
+    background-color: #fff;
+    box-shadow: 6px 4px 35px 0px #00000036;
+    padding: 6px 0px 0px 6px;
+    opacity: 0;
+  }
 
-	&__check {
-		font-family: $fontFamily;
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 17px;
-		text-transform: uppercase;
-		color: #6f6e6e;
-		margin-bottom: 6px;
-	}
+  &__check {
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #6f6e6e;
+    margin-bottom: 6px;
+  }
 
-	&__check::before {
-		content: "";
-		display: inline-block;
-		width: 13px;
-		height: 13px;
-		border: 1px solid #ebebeb;
-		margin-right: 13px;
+  &__check::before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #ebebeb;
+    margin-right: 13px;
 
-		&:hover {
-			cursor: pointer;
-		}
-	}
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
-	& label:hover {
-		cursor: pointer;
-	}
+  & label:hover {
+    cursor: pointer;
+  }
 }
 
 #XS,
@@ -220,17 +222,48 @@
 #M,
 #L,
 #size {
-	display: none;
+  display: none;
 }
 
 #XS:checked + label:before,
 #S:checked + label:before,
 #M:checked + label:before,
 #L:checked + label:before {
-	background: url("../svgicons/checked.svg") center center no-repeat;
-	background-size: contain;
+  background: url("../svgicons/checked.svg") center center no-repeat;
+  background-size: contain;
 }
 
 #size:checked + .size__form {
-	opacity: 1;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .filters {
+    &__flex {
+      justify-content: flex-end;
+    }
+  }
+}
+@media screen and (max-width: 490px) {
+  .filters {
+    &__grid {
+      display: grid;
+      grid-template: 60px / 10% 1fr;
+      vertical-align: middle;
+      text-align: left;
+    }
+  }
+  .filter {
+    &__title {
+      padding: 22px 0px 0px 16px;
+      padding: 0;
+      margin-left: -60px;
+      font-family: $fontFamily;
+      font-weight: 600;
+      font-size: 1px;
+      line-height: 1px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
 }

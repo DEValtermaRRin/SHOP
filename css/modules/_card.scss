@@ -61,7 +61,7 @@
   right: 0;
   left: 0;
   bottom: 0;
-  padding: 185px 133px 188px 110px;
+  padding: 50% 30%;
   background-color: rgba(58, 56, 56, 0.86);
   transition: 0.5s all ease-in-out 0s;
 }
@@ -90,3 +90,13 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .overlay{
+    padding: 50% 25%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .overlay{
+    padding: 0 ;
+  }
+}
