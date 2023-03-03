@@ -1299,6 +1299,7 @@ details summary::webkit-details-marker {
 .product {
   margin-top: -60px;
   position: relative;
+  padding-bottom: 65px;
 }
 .product__flex {
   margin-top: -48px;

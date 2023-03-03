@@ -14,6 +14,54 @@ class Card {
   }
 }
 
+function addingProductToHTML(arr) {
+  addedGoods.innerHTML = "";
+  arr.forEach((elem) => {
+    addedGoods.insertAdjacentHTML(
+      "beforeend",
+      `<div class="goods__item" data-id="${elem.id}">
+    <div class="goods__name">${elem.name}</div>
+    <div class="goods__price">$ ${elem.price}</div>
+    <div class="goods__count">${elem.count}</div>
+    <div class="goods__sum">$ ${elem.sum}</div>
+  </div>`
+    );
+  });
+}
+
+function countAllProducts(arr) {
+  let totalCount = 0;
+  arr.forEach((elem) => {
+    totalCount += elem.count;
+  });
+  return totalCount;
+}
+
+function countProductSum(arr) {
+  let totalSum = 0;
+  arr.forEach((elem) => {
+    totalSum += elem.sum;
+  });
+  return totalSum;
+}
+
+function watchingSameObj(allProducts, product) {
+  if (allProducts.find((item) => item.id === product.id)) {
+    const productIndex = allProducts.findIndex(
+      (item) => item.id === product.id
+    );
+    product = allProducts[productIndex];
+    product.count += 1;
+    product.sum = product.count * product.price;
+    allProducts.splice(productIndex, 1);
+  }
+  return product;
+}
+function pushProdToCart(arr, product) {
+  arr.push(watchingSameObj(arr, product));
+  return arr;
+}
+
 document.querySelector(".products__grid").addEventListener("click", (e) => {
   if (e.target.tagName !== "BUTTON") {
     hiddenCart.classList.add("hidden");
@@ -30,62 +78,8 @@ document.querySelector(".products__grid").addEventListener("click", (e) => {
 
   // создаю новый экземпляр товара
   let nextItemObj = new Card(cardId, cardName, cardPrice);
-
-  // ищу в массиве продукт с таким же id, если он есть, то меняю количество на 1
-  // и сразу меняю его итоговую стоимость
-  function watchingSameObj(allProducts, product) {
-    if (allProducts.find((item) => item.id === product.id)) {
-      const productIndex = allProducts.findIndex(
-        (item) => item.id === product.id
-      );
-      product = allProducts[productIndex];
-      product.count += 1;
-      product.sum = product.count * product.price;
-      allProducts.splice(productIndex, 1);
-    }
-    return product;
-  }
-  function pushProdToCart(arr, product) {
-    arr.push(watchingSameObj(arr, product));
-    return arr;
-  }
-
   pushProdToCart(totalCartArr, nextItemObj);
-
-  function addingProductToHTML(arr) {
-    addedGoods.innerHTML = "";
-    arr.forEach((elem) => {
-      addedGoods.insertAdjacentHTML(
-        "beforeend",
-        `<div class="goods__item" data-id="${elem.id}">
-			<div class="goods__name">${elem.name}</div>
-			<div class="goods__price">$ ${elem.price}</div>
-			<div class="goods__count">${elem.count}</div>
-			<div class="goods__sum">$ ${elem.sum}</div>
-		</div>`
-      );
-    });
-  }
-
   addingProductToHTML(totalCartArr);
-
-  function countProductSum(arr) {
-    let totalSum = 0;
-    arr.forEach((elem) => {
-      totalSum += elem.sum;
-    });
-    return totalSum;
-  }
-
   totalSumHTML.innerHTML = `$ ${countProductSum(totalCartArr)}`;
-
-  function countAllProducts(arr) {
-    let totalCount = 0;
-    arr.forEach((elem) => {
-      totalCount += elem.count;
-    });
-    return totalCount;
-  }
-
   totalCountHTML.innerHTML = `${countAllProducts(totalCartArr)}`;
 });
