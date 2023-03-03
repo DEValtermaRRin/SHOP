@@ -709,20 +709,7 @@ details summary::webkit-details-marker {
   transition: 0.5s all ease-in-out 0s;
 }
 
-.btn--add {
-  display: block;
-  border: 1px solid #fff;
-  width: 140px;
-  background-color: transparent;
-  font-family: "Lato";
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  text-transform: none;
-  color: #fff;
-  position: relative;
-  padding: 14px 0px 12px 55px;
-}
+
 .btn--add::before {
   content: url("../img/bgs/cart.png");
   display: inline-block;
